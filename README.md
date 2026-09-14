@@ -1,18 +1,68 @@
-# Mobile App Starter Kit
+# Simple Arabic Quiz — اختبار أندرويد بسيط
 
-A simple Android starter structure for practicing mobile UI, navigation, and app organization.
+تطبيق Android تجريبي صغير باللغة العربية يعرض خمسة أسئلة اختيار من متعدد. صُمم ليكون واضحاً للمبتدئين وسهل الفتح والتعديل في Android Studio.
 
-## Contents
+## المزايا
 
-- Kotlin entry point
-- Android XML layout
-- Kivy Python alternative
-- Feature roadmap
+- واجهة عربية كاملة من اليمين إلى اليسار.
+- خمسة أسئلة عامة، ولكل سؤال أربعة خيارات.
+- تلوين فوري للإجابة الصحيحة والخاطئة مع شرح قصير.
+- شريط تقدم، حساب للنتيجة، وشاشة ختامية.
+- زر لإعادة الاختبار من البداية.
+- حفظ السؤال والنتيجة عند إعادة إنشاء الشاشة.
+- لا إنترنت، لا إعلانات، لا تحليلات، ولا صلاحيات حساسة.
 
-## Stack
+## التقنية
 
-`Kotlin` · `XML` · `Python Kivy` · `Mobile UI`
+- Kotlin
+- Android SDK 35
+- الحد الأدنى: Android 7.0 / API 24
+- Java 17
+- واجهة مبنية بعناصر Android الأصلية ومن دون مكتبات تشغيل إضافية
 
-## Goal
+## التشغيل في Android Studio
 
-This repository is a lightweight base for building personal Android experiments and prototypes.
+1. نزّل أو انسخ المستودع.
+2. افتح مجلد المستودع في Android Studio.
+3. انتظر اكتمال Gradle Sync وتأكد من تثبيت Android SDK 35 وJDK 17.
+4. اختر جهازاً افتراضياً أو هاتفاً بنظام Android 7.0 أو أحدث.
+5. اضغط **Run**.
+
+## البناء من الطرفية
+
+إذا كان Gradle 8.9 مثبتاً محلياً:
+
+```bash
+gradle assembleDebug
+```
+
+سيظهر ملف APK التجريبي داخل:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+ينفّذ GitHub Actions الأمر نفسه تلقائياً عند كل رفع إلى `main`، ثم يضع APK ضمن Artifacts الخاصة بالتشغيل.
+
+## بنية المشروع
+
+```text
+app/src/main/java/dev/rad03i2/simplequiz/MainActivity.kt  منطق التطبيق والواجهة
+app/src/main/res/values/strings.xml                      النصوص العربية
+app/src/main/res/values/colors.xml                       ألوان الواجهة
+app/src/main/AndroidManifest.xml                         تعريف التطبيق
+COPILOT_PROMPT.md                                        البرومبت وإعدادات Copilot المقترحة
+.github/workflows/android.yml                            بناء APK تلقائياً
+```
+
+## تخصيص الأسئلة
+
+افتح `MainActivity.kt` وعدّل القائمة `questions`. كل سؤال يحتوي على النص، أربعة خيارات، رقم الخيار الصحيح (يبدأ من 0)، وشرح قصير.
+
+## الخصوصية
+
+يعمل التطبيق محلياً بالكامل ولا يجمع أو يرسل أي بيانات.
+
+## الترخيص
+
+مرخّص وفق [MIT License](LICENSE).

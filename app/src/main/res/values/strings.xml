@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">اختبار بسيط</string>
+    <string name="progress">السؤال %1$d من %2$d</string>
+    <string name="next">السؤال التالي</string>
+    <string name="show_result">عرض النتيجة</string>
+    <string name="correct_answer">إجابة صحيحة! %1$s</string>
+    <string name="wrong_answer">إجابة غير صحيحة. %1$s</string>
+    <string name="finished">اكتمل الاختبار</string>
+    <string name="final_score">نتيجتك: %1$d من %2$d</string>
+    <string name="try_again">إعادة الاختبار</string>
+    <string name="result_perfect">ممتاز! أجبت عن جميع الأسئلة بصورة صحيحة.</string>
+    <string name="result_good">أحسنت! نتيجة جميلة لتجربة بسيطة.</string>
+    <string name="result_retry">محاولة جيدة. أعد الاختبار لتحسين النتيجة.</string>
+</resources>
