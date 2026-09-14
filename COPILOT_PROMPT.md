@@ -1,32 +1,39 @@
-# Prompt for GitHub Copilot
+# GitHub Copilot development prompt
 
-Use this prompt in GitHub Copilot Chat with **Agent mode** enabled:
+استخدم المطالبة التالية في GitHub Copilot Chat مع تفعيل **Agent mode**:
 
 ```text
-Act as a senior Android engineer. Build and maintain a very small, beginner-friendly Android quiz app in this repository.
+You are the senior Android engineer responsible for this repository. Maintain a polished, offline Arabic quiz game inspired by the classic millionaire-style knowledge challenge, while keeping all graphics, copy, and sounds original and avoiding third-party trademarks or copyrighted assets.
 
-Requirements:
-- Native Android app written in Kotlin; no web view and no network access.
-- Use a single Activity and Android platform widgets so the sample stays easy to read.
-- Arabic, right-to-left interface with five short general-knowledge questions and four choices per question.
-- After a choice, lock the answers, color the correct choice green, color a wrong selected choice red, and show a one-sentence explanation.
-- Show question progress, calculate the score, provide a result screen, and allow restarting.
-- Preserve state during screen recreation.
-- Minimum Android 7.0 (API 24), target/compile API 35, Java 17.
-- Keep dependencies minimal. Never add analytics, ads, permissions, accounts, secrets, or remote services.
-- Keep the project buildable with `gradle assembleDebug`.
-- Update README.md whenever behavior or build requirements change.
-- Before finishing: inspect all changed files, fix compilation issues, explain the changes, and state the exact verification command.
+Product requirements:
+- Native Kotlin Android app, single Activity, Android platform widgets, no WebView.
+- Fully Arabic RTL interface with a premium navy-and-gold visual system.
+- Exactly 15 increasingly difficult multiple-choice questions per round and four answers per question.
+- Prize ladder from $100 to $1,000,000, with safety milestones at $1,000 and $32,000.
+- 30-second countdown per question with a clear urgent state in the final 10 seconds.
+- One-time lifelines: 50:50, phone a friend, and audience vote.
+- Answer lock, short reveal animation, green/red result states, and a factual explanation.
+- Allow walking away with the last secured prize; show an explicit confirmation first.
+- Start, game, and result screens; restart flow; best-prize persistence.
+- Save all in-progress state across Activity recreation, including timer and lifelines.
+- Accessibility: meaningful Arabic content descriptions, high contrast, readable type, and large touch targets.
+- Entirely offline: no permissions, network, analytics, ads, accounts, tracking, or secrets.
 
-Visual direction: clean white/slate background, indigo primary color, large readable Arabic text, generous spacing, portrait layout, and accessible button labels.
+Engineering constraints:
+- Minimum API 24, compile/target API 35, Java 17, Kotlin.
+- Keep external runtime dependencies at zero unless explicitly approved.
+- Keep `gradle assembleDebug` green.
+- Never weaken privacy settings or add Internet permission.
+- Update README.md, versionCode, and versionName for product releases.
+- Review every changed file and report the exact verification commands before finishing.
 
-Do not expand the scope beyond this experimental quiz app unless explicitly asked.
+When adding questions, verify that every answer is unambiguous and that the correctIndex matches the four-choice list. Do not silently broaden scope.
 ```
 
-## Suggested Copilot settings
+## الإعدادات المقترحة
 
-- Mode: **Agent** for repository-wide work; **Ask** for explanations only.
-- Working set: repository root.
-- Auto-fix: allow only project files, never credentials or machine settings.
-- Review: inspect the proposed diff before accepting large changes.
-- Terminal commands: allow only Android build/test commands for this repository.
+- الوضع: **Agent** للتعديلات الشاملة و**Ask** للأسئلة والشرح.
+- Working set: جذر المستودع بالكامل.
+- السماح بالأوامر: أوامر Gradle وAndroid الخاصة بهذا المشروع فقط.
+- مراجعة التغييرات: راجع Diff قبل قبول أي تغيير كبير.
+- الخصوصية: ارفض إضافة الصلاحيات أو الشبكات أو الإعلانات ما لم يطلبها مالك المشروع صراحةً.

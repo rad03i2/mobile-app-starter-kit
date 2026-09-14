@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#4F46E5</color>
-    <color name="primary_dark">#3730A3</color>
-    <color name="background">#F8FAFC</color>
-    <color name="text_primary">#0F172A</color>
-    <color name="text_secondary">#475569</color>
-    <color name="option_default">#4F46E5</color>
-    <color name="option_disabled">#94A3B8</color>
-    <color name="correct">#16A34A</color>
-    <color name="incorrect">#DC2626</color>
+    <color name="white">#FFFFFF</color>
+    <color name="navy_deep">#050824</color>
+    <color name="navy_panel">#0B1245</color>
+    <color name="navy_panel_light">#273268</color>
+    <color name="navy_answer">#111B55</color>
+    <color name="navy_answer_disabled">#171C38</color>
+    <color name="gold">#F6C945</color>
+    <color name="gold_light">#FFE798</color>
+    <color name="gold_muted">#8D7431</color>
+    <color name="text_soft">#E7E9F7</color>
+    <color name="text_muted">#8F95B8</color>
+    <color name="answer_selected">#D18400</color>
+    <color name="correct">#15803D</color>
+    <color name="correct_dark">#0D5129</color>
+    <color name="correct_light">#86EFAC</color>
+    <color name="incorrect">#B91C1C</color>
+    <color name="incorrect_dark">#681313</color>
+    <color name="incorrect_light">#FCA5A5</color>
 </resources>
