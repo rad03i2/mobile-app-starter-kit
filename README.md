@@ -85,3 +85,8 @@ COPILOT_PROMPT.md                                        مواصفات التط
 ## الترخيص
 
 مرخّص وفق [MIT License](LICENSE).
+
+## الروابط الرسمية
+
+- الموقع: https://rdwan.dev
+- صفحة المشروع: https://rdwan.dev/projects/14-mobile-app-starter-kit.html
